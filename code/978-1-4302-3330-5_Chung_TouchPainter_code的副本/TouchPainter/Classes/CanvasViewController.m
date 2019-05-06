@@ -12,7 +12,6 @@
 
 @implementation CanvasViewController
 
-// @synthesize表示如果属性没有手动实现setter和getter方法，编译器会自动加上这两个方法。
 @synthesize canvasView=canvasView_;
 @synthesize scribble=scribble_;
 @synthesize strokeColor=strokeColor_;
@@ -148,8 +147,6 @@
   [canvasView_ removeFromSuperview];
   CGRect aFrame = CGRectMake(0, 0, 320, 436);
   CanvasView *aCanvasView = [generator canvasViewWithFrame:aFrame];
-    
-  // [self setCanvasView:aCanvasView]; 给 canvasView_ 进行赋值
   [self setCanvasView:aCanvasView];
   NSInteger viewIndex = [[[self view] subviews] count] - 1;
   [[self view] insertSubview:canvasView_ atIndex:viewIndex];
