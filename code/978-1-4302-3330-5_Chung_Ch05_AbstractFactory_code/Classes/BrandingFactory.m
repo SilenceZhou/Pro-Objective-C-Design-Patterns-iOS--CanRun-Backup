@@ -15,6 +15,7 @@
 
 + (BrandingFactory *) factory
 {
+    // todo： 需要在 build setting => apple clang - preprocessing => preprocessor Macros 给Debug添加上值
 #if defined (USE_ACME)
 	return [[[AcmeBrandingFactory alloc] init] autorelease];
 #elif defined (USE_SIERRA)
